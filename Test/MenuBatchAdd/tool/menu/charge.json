@@ -1,0 +1,124 @@
+[
+    {
+        "icon": "yunyingshang",
+        "visible": "0",
+        "menuType": "M",
+        "menuName": "充电桩补贴管理",
+        "path": "charge",
+        "orderNum": 0,
+        "component": "Layout",
+        "name": "Layout",
+        "parentId": 0,
+        "children": [
+            {
+                "icon": "yunyingshang",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "充电信息管理",
+                "path": "basic",
+                "orderNum": 0,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "yunyingshang",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "充电运营商管理",
+                        "path": "carrier",
+                        "orderNum": 0,
+                        "perms": "charge:basic:carrier:page",
+                        "component": "charge/basic/carrier",
+                        "name": "charge_basic_carrier",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "查询",
+                                "orderNum": 0,
+                                "perms": "charge:basic:carrier:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "新增",
+                                "orderNum": 1,
+                                "perms": "charge:basic:carrier:insert"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 2,
+                                "perms": "charge:basic:carrier:find"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "修改",
+                                "orderNum": 3,
+                                "perms": "charge:basic:carrier:update"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "删除",
+                                "orderNum": 4,
+                                "perms": "charge:basic:carrier:delete"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "充电运营商新增",
+                        "path": "carrier/insert",
+                        "orderNum": 1,
+                        "perms": "charge:basic:carrier:insert:page",
+                        "component": "charge/basic/carrier/insert",
+                        "name": "charge_basic_carrier_insert",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "充电运营商查看",
+                        "path": "carrier/find/:id",
+                        "orderNum": 2,
+                        "perms": "charge:basic:carrier:find:page",
+                        "component": "charge/basic/carrier/find",
+                        "name": "charge_basic_carrier_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "充电运营商修改",
+                        "path": "carrier/update/:id",
+                        "orderNum": 3,
+                        "perms": "charge:basic:carrier:update:page",
+                        "component": "charge/basic/carrier/update",
+                        "name": "charge_basic_carrier_update",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            }
+        ],
+        "crumb": "noClick",
+        "isFrame": "1",
+        "status": "0",
+        "alwaysShow": false
+    }
+]
