@@ -1,5 +1,6 @@
 <template>
   <div :class="$style.container">
+    <p>共有{{ total }}个菜单</p>
     <el-button
       type="primary"
       @click.once.prevent="
@@ -23,7 +24,7 @@ export default {
       menu: menu,
       count: 0,
       total: 0,
-      disabled: false
+      disabled: false,
     };
   },
   methods: {
@@ -34,14 +35,14 @@ export default {
       return addMenu(params);
     },
     handleInsertMenu(menu) {
-      menu.forEach(item => {
+      menu.forEach((item) => {
         //   只有等父菜单添加完毕才会添加子菜单
         this.request(item)
-          .then(res => {
+          .then((res) => {
             let { menuId } = res.data;
             if (item.children && item.children.length) {
               // 如果存在子菜单 才会往下递归
-              item.children.forEach(item => (item.parentId = menuId));
+              item.children.forEach((item) => (item.parentId = menuId));
               this.handleInsertMenu(item.children);
             }
             if (++this.count == this.total)
@@ -53,17 +54,16 @@ export default {
       });
     },
     statTotal(menu) {
-      menu.forEach(item => {
+      menu.forEach((item) => {
         this.total++;
         menu.children && this.statTotal(menu.children);
       });
-    }
+    },
   },
   created() {
-    debugger
     //   获取总数
     this.statTotal(this.menu);
-  }
+  },
 };
 </script>
 <style lang="less" module>
