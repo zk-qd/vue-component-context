@@ -45,7 +45,8 @@ const fs = require('fs'),
 const menu_dir = path.join(__dirname, "menu"), // 菜单数据存放目录
     vue_dir = path.join(__dirname, "vue"), // 文件存放目录
     permi_dir = path.join(__dirname, 'permi'), // 权限存放目录
-    rule_dir = path.join(__dirname, 'rule'); // 校验规则存放目录
+    rule_dir = path.join(__dirname, 'rule'), // 校验规则存放目录
+    network_dir = path.join(__dirname, 'network'); // network存放目录
 
 const config = {
     vue: '.vue',
@@ -82,6 +83,8 @@ function generatorFile(paths, { type, main, unify }) {
                     createRuleJs(paths);
                     // 最后一层下的  permi的 index.js
                     createPermiJs(paths);
+                    // 最后一层下的  network的index.js
+                    createNetWorkJs(paths);
                 } else {
                     // 创建 insert find update 文件
                     createRestVue(paths.join('/').split('/'));
@@ -140,6 +143,7 @@ function createListAndIndex(paths, type) {
         createAnyList(path.join(vue_dir, path_list)); // 生成vue目录
         createAnyList(path.join(permi_dir, path_list)); // 生成permi目录
         createAnyList(path.join(rule_dir, path_list)); // 生成rule目录
+        createAnyList(path.join(network_dir, path_list)); // 生成network目录
 
         // type = 0 index = 0就不做任何事
         if (index !== 0 || type !== 0) {
@@ -150,7 +154,6 @@ function createListAndIndex(paths, type) {
             createIndexJs(path_permi_index, item, writeContent);
             createIndexJs(path_rule_index, item, writeContent);
         }
-
     })
 
 }
@@ -236,13 +239,16 @@ function createRuleJs(paths) {
     ].join('\r\n')); // 生成rule js
 }
 
+
+/*
+    创建index.js文件
+    paths:  ['industry','basic','rent/company']
+*/
+function createNetWorkJs(paths) {
+    fs.writeFileSync(path.join(network_dir, paths.join('/') + config.main + config.js))
+}
 /*
 创建index.vue文件
-
-思路:
-1. 考虑到多层目录
-2. 需要循环创建该层的目录
-3. 最后一层再创建index.vue文件
 
 参数：
 paths:  ['industry','basic','rent/company'] 
