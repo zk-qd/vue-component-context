@@ -19,7 +19,7 @@ const config = {
     menuPageMethod: 'get',
     menuDelPath: '/menu/remove/',
     menuDelMethod: 'delete',
-    token: '',
+    token: 'eyJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6WyIqIl0sInRpY2siOjE2MDc2Njg2MDM1NDgsInVzZXJuYW1lIjoiYWRtaW4ifQ.PRU4V9Ij5YJXH8cc7KH7OGv8werZ8r44Nl3u4rNK9ao',
 },
     baseInfo = {
         origin: '',
@@ -73,12 +73,17 @@ function delMenu(id) {
 
 
 // 递归删除
+/* 
+    删除还有些问题：由于循环 不同函数无法等待，
+    需要多调用几次
+*/
 async function recursionDel(menus) {
     menus.forEach(async item => {
         // 存在则继续递归
         if (item.children) await recursionDel(item.children);
         // 删除当前菜单
-        await delMenu(item.menuId);
+        let result = JSON.parse(await delMenu(item.menuId));
+        console.log(chalk.blue(result.msg, '成功删除', item.menuId))
     })
 }
 
@@ -103,19 +108,29 @@ function handleTree(data, id, parentId, children, rootId) {
 }
 
 
-async function execute(pid) {
+/**
+ * @param {Array or Number} menuIds 要删除的菜单id
+ * todo： 既可以传入数组也可以传入数字
+ * * 传入数组删除多个一级目录菜单
+ * !目前只能传入一级目录删除及以下，传入二级或者三级等是不能删除的
+ *  */
+async function execute(menuIds) {
+    // 安全策略
+    if (!(menuIds instanceof Array)) menuIds = [menuIds];
     // 设置基本信息
     await new Promise((resolve, reject) => {
         auto(getBaseInfo, resolve);
     });
     // 获取所有菜单
-    let menus = await getMenu();
-    // 筛选出菜单
-    let menu = menus.find(item => item.id == pid);
+    let menus = JSON.parse(await getMenu()).data;
     // 转成树状结构
-    menu = handleTree([menu], 'menuId');
+    menus = handleTree(menus, 'menuId')
+    // 筛选出需要的目录
+    menus = menuIds.map(menuId => {
+        return menus.find(menu => menu.menuId == menuId)
+    })
     // 递归删除
-    recursionDel(menu);
+    recursionDel(menus);
 }
 
 
