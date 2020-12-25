@@ -47,8 +47,8 @@ export default {
 <style lang="less" scoped>
 .col {
   .title {
-    color: #909399;
-    font-weight: 500;
+    color: #555b67;
+    font-weight: 600;
   }
   /* height: 40px; */
   line-height: 38px;
