@@ -14,9 +14,17 @@
     >
   </div>
 </template>
+
 <script>
-import menu from "./tool/menu/industry.json";
+import menu from "./tool/menu/exchange.json";
 import { addMenu } from "@/network/system/menu";
+
+
+/* 
+  可以添加任意级别开始的菜单，最外层只需要有parentId即可
+
+
+*/
 export default {
   name: "test_menu_batch_add",
   data() {
@@ -56,7 +64,7 @@ export default {
     statTotal(menu) {
       menu.forEach((item) => {
         this.total++;
-        menu.children && this.statTotal(menu.children);
+        item.children && this.statTotal(item.children);
       });
     },
   },

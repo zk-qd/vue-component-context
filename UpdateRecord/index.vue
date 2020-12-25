@@ -52,7 +52,7 @@ export default {
       datas: [],
       query: {
         index: 1,
-        count: 5
+        count: 5,
       },
       ref: "table",
     };
@@ -77,7 +77,7 @@ export default {
     */
     handleCurrentChange(...args) {
       this.$emit("current-change", ...args);
-    }
+    },
   },
   watch: {
     data: {
@@ -85,8 +85,9 @@ export default {
         this.rows = nData.rows;
         this.datas = nData.datas;
       },
-      immediate: true
-    }
+      immediate: true,
+      deep: true,
+    },
   },
   props: {
     //   接口数据
@@ -94,7 +95,7 @@ export default {
         data: {datas: [],rows: 20};
      */
     data: {
-      type: Object
+      type: Object,
     },
     // 字段项
     /*
@@ -112,6 +113,7 @@ export default {
           align: "",
           width: "",
           tooltip: "true",
+          format:(v,i,item)=> {}
           children: [
             {
               prop: "prop1",
@@ -122,17 +124,18 @@ export default {
             },
             {
               type: "operation",
-              label: "", 有默认值
-              align: "", 默认值是居中
+              label: "",// 有默认值
+              align: "", //默认值是居中
               width: "", 
+              visible: "" // 只要不等于false，那么就显示
               buttons: [
                 {
                   icon: window.$gIcons.find,
                   click: scope=> {},
-                  class: "", blue
+                  class: "", //blue
                   hasPermi: window.$hasPermi.basic.company.search,//默认值['*:*:*']
                   title: '',
-                  titleFormat: function(scope) {} // 格式化title
+                  titleFormat: function(scope) {} // 格式化title,如有时候同一个查看要显示不同的标题
                 }
               ]
             }R
@@ -142,38 +145,38 @@ export default {
       */
     match: {
       type: Array,
-      require: true
+      require: true,
     },
 
     /* :pageable="true" 是否分页 */
     ["pageable"]: {
       type: Boolean,
-      default: false
+      default: false,
     },
 
     // highlight-current-row  开启可选中当前行
     highlightCurrentRow: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 组件的层级
     level: {
       type: Number,
-      default: 2
+      default: 2,
     },
     vue: {
-      type: Object
+      type: Object,
     },
     // 初始化加载时是否请求
     immediate: {
       type: Boolean,
-      default: true
+      default: true,
     },
   },
   created() {
     //   初始化请求
     this.immediate && this.request(1);
-  }
+  },
 };
 </script>
 <style lang="scss" scoped></style>

@@ -1,7 +1,7 @@
 <template>
-  <el-col :span="span" class="col" v-if="data" > 
-      <!-- style="text-align:right;" -->
-    <em v-if="data.title">{{ data.title }}<i>|</i></em>
+  <el-col :span="span" class="col" v-if="data">
+    <!-- style="text-align:right;" -->
+    <em v-if="data.title" class="title">{{ data.title }}<i>|</i></em>
     <span v-for="(item, index) in data.children" :key="index">
       <i v-show="!(index == 0)">|</i>
       <em>{{ item.label }}</em>
@@ -14,18 +14,17 @@
   </el-col>
 </template>
 <script>
-
 // 表格 统计数据
 export default {
   created() {},
   props: {
     span: {
       type: Number,
-      default: 24
+      default: 24,
     },
     data: {
-      type: null
-    }
+      type: null,
+    },
     /* 
     data: {
         title: '龙骧',
@@ -42,11 +41,15 @@ export default {
     }
 
     */
-  }
+  },
 };
 </script>
 <style lang="less" scoped>
 .col {
+  .title {
+    color: @headerColor;
+    font-weight: 500;
+  }
   /* height: 40px; */
   line-height: 38px;
   i {

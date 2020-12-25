@@ -34,8 +34,16 @@
               :style="{ color: item.color ? item.color : 'inherit' }"
               :title="item.value"
             >
-              {{ item.value }}</em
-            >
+              <template v-if="item.slot">
+                <slot :name="item.slot" v-bind="item"></slot>
+              </template>
+              <template v-else>
+                {{ item.value }}
+              </template>
+              <!-- <template v-else-if="item.contentType == 'file'">
+                <file-overview v-if="item.value" :value="item.value" />
+              </template> -->
+            </em>
             <router-link
               v-if="item.route"
               :to="item.route.to"
@@ -72,35 +80,43 @@ export default {
     4. 可跳转
     5. 内容格式化
 
+
+    - 扩展
+    1. 详情项如何展示控件，想了两种方式，
+    a.新加contenType属性判断内容类型，如果是file类型，那么就是用file控件，插件还需要引入file插件使用，优点：使用起来方便，缺点：耦合高扩展差
+    b.使用slot属性来决定使用何种插槽， 优点: 扩展良好，缺点: 插件引入交给了使用方，
+
+
      */
   name: "InfoList",
   data() {
     return {
-      list: []
+      list: [],
+      contentTypes: ["default", "file"],
     };
   },
   props: {
     background: {
       type: Boolean,
-      default: true
+      default: true,
     },
     border: {
       type: Boolean,
-      default: true
+      default: true,
     },
     item: {
       type: Object,
       default: () => {
         return {};
-      }
+      },
     },
     match: {
       type: Array,
-      require: true
+      require: true,
     },
     level: {
       type: Number,
-      default: 2
+      default: 2,
     },
     /* span: {
       type: Number,
@@ -117,11 +133,11 @@ export default {
       validator(val) {
         // 占位
         return [1, 2, 3, 4, 6, 8, 12, 24].includes(val);
-      }
+      },
     },
     vue: {
-      type: Object
-    }
+      type: Object,
+    },
   },
   /*
 
@@ -137,6 +153,7 @@ export default {
           span: 1,//单独项占据的等分 （因为头部和内容的宽度取的是百分比，如果总宽度和其他不一致，那么头部部分宽度也会对不齐,已解决： 通过max和min width）
           ownclick: false, // 点击详情跳转 还是 点击自身跳转  如果该属性为true 那么value和identifier对应的字段在接口处必须转成数组
           hasPermi: '', 权限值
+          slot: '',// 默认为空 常用值 file,
         },
         
         ]
@@ -159,7 +176,7 @@ export default {
         }
         this.match &&
           this.match.forEach((mItem, mIndex) => {
-            // debugger
+            
             data.push({
               // 项字段
               prop: mItem.prop,
@@ -180,7 +197,12 @@ export default {
               color: mItem.color,
               ownclick: mItem.ownclick === true ? true : false, // 点击详情跳转 还是 点击自身跳转
               hasPermi: mItem.hasPermi || ["*:*:*"],
-              span: mItem.span
+              span: mItem.span,
+              slot: mItem.slot,
+              /* contentType:
+                this.contentType.find(item === mItem.contentType) === -1
+                  ? this.contentTypes[0]
+                  : mItem.contentType, */
             });
           });
         this.list = data;
@@ -192,9 +214,9 @@ export default {
             route = {
               to: {
                 ...to,
-                path: to.path + (identifier ? "/" + newItem[identifier] : "")
+                path: to.path + (identifier ? "/" + newItem[identifier] : ""),
               },
-              name: mItem.route.name || ""
+              name: mItem.route.name || "",
             };
           if (mItem.ownclick && newItem[mItem.prop]) {
             let rs = newItem[mItem.prop].map((item, index) => {
@@ -207,9 +229,9 @@ export default {
           }
           return route;
         }
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 <style module lang="less">

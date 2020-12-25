@@ -12,7 +12,7 @@
 </template>
 <script>
 import UploadVideo from "../../UploadVideo";
-import { update } from "@/network/industry/basic/driver";
+// import { update } from "@/network/industry/basic/driver";
 import { imp } from "@/network/file/index";
 export default {
   name: "UploadDemo",

@@ -93,7 +93,7 @@ export default {
 
     tip: /* 提示信息 */ {
       type: String,
-      default: "提示：仅允许导入“xls”或“xlsx”格式文件！且大小不超过2M"
+      default: "提示：仅允许导入“xls”或“xlsx”格式文件！且大小不超过10M"
     },
     // 是否显示可以下载模板
     template: {
