@@ -7,3 +7,9 @@ export const source = _source
 
 import * as _audit from "./audit"
 export const audit = _audit
+
+import * as _monitor from "./monitor"
+export const monitor = _monitor
+
+import * as _stat from "./stat"
+export const stat = _stat

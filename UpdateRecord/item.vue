@@ -7,7 +7,7 @@
     :align="item.align"
   ></el-table-column>
   <el-table-column
-    v-else-if="item.type === 'operation'"
+    v-else-if="item.type === 'operation' && item.visible"
     :label="item.label || '操作'"
     :width="item.width || '200'"
     :align="item.align || 'center'"
@@ -28,7 +28,7 @@
     </template>
   </el-table-column>
   <el-table-column
-    v-else
+    v-else-if="!item.type"
     :prop="item.prop"
     :label="item.label"
     :align="item.align"
@@ -61,15 +61,15 @@ export default {
   props: {
     item: {
       type: Object,
-      require: true
+      require: true,
     },
     vue: {
-      type: Object
+      type: Object,
     },
     level: {
-      type: Number
-    }
+      type: Number,
+    },
   },
-  methods: {}
+  methods: {},
 };
 </script>

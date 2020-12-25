@@ -7,7 +7,7 @@ const fs = require('fs'),
     {
         wrap,
         auto,
-    } = require('zk-generator-automatic');
+    } = require('@zk-npm/gen-automation');
 const { resolve } = require('path');
 const config = {
     envPlace: path.join(__dirname, '../../../../../.env.development'), // 环境文件位置
@@ -19,7 +19,7 @@ const config = {
     menuPageMethod: 'get',
     menuDelPath: '/menu/remove/',
     menuDelMethod: 'delete',
-    token: 'eyJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6WyIqIl0sInRpY2siOjE2MDc2Njg2MDM1NDgsInVzZXJuYW1lIjoiYWRtaW4ifQ.PRU4V9Ij5YJXH8cc7KH7OGv8werZ8r44Nl3u4rNK9ao',
+    token: 'eyJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6WyIqIl0sInRpY2siOjE2MDg2MDYzOTI4MDAsInVzZXJuYW1lIjoiYWRtaW4ifQ.0HiedB0Z7b3lf1_VwBD0WFRFNQOIzI0st2GNG7SqBVU',
 },
     baseInfo = {
         origin: '',
@@ -35,7 +35,7 @@ function* getBaseInfo() {
 
 // 获取菜单W
 function getMenu() {
-    let href = baseInfo.origin + baseInfo.apiPrefix + config.menuPagePath;
+    let href = baseInfo.origin /* + baseInfo.apiPrefix */ + config.menuPagePath;
     return new Promise((resolve, reject) => {
         const req = http.request({
             ...url.parse(href),
@@ -54,7 +54,7 @@ function getMenu() {
 
 // 删除菜单
 function delMenu(id) {
-    let href = baseInfo.origin + baseInfo.apiPrefix + config.menuDelPath + id;
+    let href = baseInfo.origin /* + baseInfo.apiPrefix */ + config.menuDelPath + id;
     return new Promise((resolve, reject) => {
         const req = http.request({
             ...url.parse(href),
@@ -76,15 +76,23 @@ function delMenu(id) {
 /* 
     删除还有些问题：由于循环 不同函数无法等待，
     需要多调用几次
+
+
+    已优化
 */
 async function recursionDel(menus) {
-    menus.forEach(async item => {
-        // 存在则继续递归
-        if (item.children) await recursionDel(item.children);
-        // 删除当前菜单
-        let result = JSON.parse(await delMenu(item.menuId));
-        console.log(chalk.blue(result.msg, '成功删除', item.menuId))
-    })
+    let i = 0; len = menus.length;
+    for (; i < len; i++) {
+        let item = menus[i];
+        await runDel(item);
+    }
+}
+async function runDel(item) {
+    // 存在则继续递归
+    if (item.children) await recursionDel(item.children);
+    // 删除当前菜单
+    let result = JSON.parse(await delMenu(item.menuId));
+    console.log(chalk.blue(result.msg, '成功删除', item.menuId))
 }
 
 function handleTree(data, id, parentId, children, rootId) {
@@ -127,8 +135,17 @@ async function execute(menuIds) {
     menus = handleTree(menus, 'menuId')
     // 筛选出需要的目录
     menus = menuIds.map(menuId => {
-        return menus.find(menu => menu.menuId == menuId)
-    })
+        let menu = menus.find(menu => menu.menuId == menuId);
+        if (menu) {
+            return menu;
+        } else {
+            console.log(menuId, '菜单已经被删除，或者本就不存在')
+            return null;
+        }
+    });
+    // 去除为null的目录
+    menus = menus.filter(menu => menu);
+
     // 递归删除
     recursionDel(menus);
 }

@@ -11,8 +11,16 @@
         :title="item.title"
         :key="index"
         :description="item.description"
-        :icon="item.icon"
-      ></el-step>
+        :class="{ icon: item.icon }"
+      >
+        <!-- <i slot="icon" class="el-icon-eleme"></i> -->
+        <svg-icon
+          v-if="item.icon"
+          slot="icon"
+          :icon-class="item.icon"
+          style="width: 100%;height: 100%;"
+        ></svg-icon>
+      </el-step>
     </el-steps>
   </div>
 </template>
@@ -25,13 +33,13 @@ export default {
   props: {
     items: {
       type: Array,
-      require: true
+      require: true,
     },
     active: {
       type: Number,
-      require: true
-    }
-  }
+      require: true,
+    },
+  },
 };
 
 /* 
@@ -55,5 +63,19 @@ export default {
   width: 100%;
   background-color: white;
   padding: 15px 200px;
+}
+</style>
+<style lang="less">
+.icon {
+  .el-step__icon.is-text {
+    width: 40px;
+    height: 40px;
+    border-color: transparent;
+  }
+  .el-step__line {
+    left: 60% !important;
+    right: -40% !important;
+    margin-top: 10px !important;
+  }
 }
 </style>

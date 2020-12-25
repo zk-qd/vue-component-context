@@ -106,7 +106,7 @@ export default {
 
     */
     handleChange(file, fileList) {
-      debugger
+     
       this.fileList = [...fileList];
       this.observer.emit("togger", { length: this.fileList.length });
     },

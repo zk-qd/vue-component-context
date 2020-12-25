@@ -92,17 +92,17 @@ export default {
   props: {
     accept: /* 图片类型 */ {
       type: String,
-      default: ".jpg, .jpeg, .png, .gif"
+      default: ".jpg, .jpeg, .png, .gif",
     },
     size: /* 文件大小限制 不超过100m */ {
       type: Number,
-      default: 100 * 1024 * 1024
-    }
+      default: 100 * 1024 * 1024,
+    },
     /*
       人像面照片
       国徽面照片
     */
-  }
+  },
   /* 
     上传图片的思路：
     接口： 1. 上传文件接口，  2. 修改接口（字段对应服务器图片地址） 3. 查询接口 （字段对应服务器图片地址）

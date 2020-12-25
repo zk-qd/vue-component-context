@@ -1,5 +1,5 @@
 <template>
-  <div class="content_box-container">
+  <div class="content_box-container" :class="{ 'no-border': !border }">
     <p class="content_box-title">
       {{ title }}
       <!-- 文字按钮 -->
@@ -35,15 +35,21 @@ export default {
     内容盒子：
 
     title: 标题名称
+
+    border: 判断有无边框的
     
     
      */
   props: {
     title: {
       type: String,
-      require: true
-    }
-  }
+      require: true,
+    },
+    border: {
+      type: Boolean,
+      default: true,
+    },
+  },
 };
 </script>
 <style lang="less" scoped>
@@ -51,6 +57,7 @@ export default {
 .content_box-container {
   border: @listBorder;
 }
+
 .content_box-title {
   // border-bottom: 1px solid #c0d8e9;
   border-bottom: @listBorder;
@@ -88,5 +95,14 @@ export default {
 }
 .content_box-content {
   padding: 15px;
+}
+
+// 无边框
+.no-border {
+  border: none !important;
+  p {
+    border: none !important;
+    padding-bottom: 0 !important;
+  }
 }
 </style>
