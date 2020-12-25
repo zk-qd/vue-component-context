@@ -48,7 +48,7 @@ export default {
             { label: "线路名称", align: "center", prop: "lineName" },
             {
               prop: "cars",
-              label: "营运车辆"
+              label: "运营车辆"
             },
             {
               prop: "upTrips",

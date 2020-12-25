@@ -1,4 +1,4 @@
-export const SVG_ADDRESS = '//at.alicdn.com/t/font_2218079_l3xh6ulcqd.js';
+export const SVG_ADDRESS = '//at.alicdn.com/t/font_1819078_pjg30ed1ba.js';
 // add script
 function addSvgScript() {
     if (!document.getElementsByClassName('svgScript')[0]) {
