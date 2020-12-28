@@ -46,10 +46,10 @@ export default {
 </script>
 <style lang="less" scoped>
 .col {
-  .title {
-    color: @headerColor;
-    font-weight: 500;
-  }
+  /* .title {
+    color: #555b67;
+    font-weight: 600;
+  } */
   /* height: 40px; */
   line-height: 38px;
   i {

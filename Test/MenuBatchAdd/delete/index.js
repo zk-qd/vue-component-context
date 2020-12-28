@@ -8,18 +8,19 @@ const fs = require('fs'),
         wrap,
         auto,
     } = require('@zk-npm/gen-automation');
-const { resolve } = require('path');
 const config = {
     envPlace: path.join(__dirname, '../../../../../.env.development'), // 环境文件位置
     hostPattern: /VUE_APP_OUTER_ORIGIN\s*=\s*["'](.*)["']/, // 主机匹配
     apiPrefixPattern: /VUE_APP_BASE_API\s*=\s*["'](.*)["']/, // api前缀匹配
     pathPrefix: '',// 路径前缀
     token: '',
-    menuPagePath: '/menu/list',
+    // menuPagePath: '/menu/list',
+    menuPagePath: '/pass/menu/list',
     menuPageMethod: 'get',
-    menuDelPath: '/menu/remove/',
+    // menuDelPath: '/menu/remove/',
+    menuDelPath: '/pass/menu/remove/',
     menuDelMethod: 'delete',
-    token: 'eyJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6WyIqIl0sInRpY2siOjE2MDg2MDYzOTI4MDAsInVzZXJuYW1lIjoiYWRtaW4ifQ.0HiedB0Z7b3lf1_VwBD0WFRFNQOIzI0st2GNG7SqBVU',
+    token: 'eyJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6WyIqIl0sInRpY2siOjE2MDkxMTk0NTY0MTUsInVzZXJuYW1lIjoiYWRtaW4ifQ.0zp11g_HSV0eFkt-oMZsa0vu0G_jFKLdg4I33c3I0pg',
 },
     baseInfo = {
         origin: '',
@@ -35,7 +36,8 @@ function* getBaseInfo() {
 
 // 获取菜单W
 function getMenu() {
-    let href = baseInfo.origin /* + baseInfo.apiPrefix */ + config.menuPagePath;
+    // let href = baseInfo.origin + config.menuPagePath;// tocc数据交换平台
+    let href = baseInfo.origin + baseInfo.apiPrefix + config.menuPagePath; //长沙县公交监管
     return new Promise((resolve, reject) => {
         const req = http.request({
             ...url.parse(href),
@@ -54,7 +56,8 @@ function getMenu() {
 
 // 删除菜单
 function delMenu(id) {
-    let href = baseInfo.origin /* + baseInfo.apiPrefix */ + config.menuDelPath + id;
+    // let href = baseInfo.origin + config.menuDelPath + id; // tocc数据交换平台
+    let href = baseInfo.origin + baseInfo.apiPrefix + config.menuDelPath + id; // 长沙县公交监管
     return new Promise((resolve, reject) => {
         const req = http.request({
             ...url.parse(href),
@@ -89,10 +92,10 @@ async function recursionDel(menus) {
 }
 async function runDel(item) {
     // 存在则继续递归
-    if (item.children) await recursionDel(item.children);
+    if (item.children && item.children.length) await recursionDel(item.children);
     // 删除当前菜单
     let result = JSON.parse(await delMenu(item.menuId));
-    console.log(chalk.blue(result.msg, '成功删除', item.menuId))
+    console.log(chalk.blue(result.msg, '成功删除', item.menuId, item.menuName))
 }
 
 function handleTree(data, id, parentId, children, rootId) {
