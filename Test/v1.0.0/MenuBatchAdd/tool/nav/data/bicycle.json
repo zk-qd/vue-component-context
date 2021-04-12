@@ -1,0 +1,189 @@
+[
+    {
+        "hidden": false,
+        "alwaysShow": false,
+        "path": "/bicycle",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "共享单车模块",
+            "icon": "wangyueche",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "basic",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "基础数据",
+                    "icon": "pingtaiguanlixukezhengguanli",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "company",
+                        "component": "bicycle/basic/company",
+                        "name": "bicycle_basic_company",
+                        "meta": {
+                            "title": "企业信息",
+                            "icon": "qiye",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "car",
+                        "component": "bicycle/basic/car",
+                        "name": "bicycle_basic_car",
+                        "meta": {
+                            "title": "车辆信息（电单车）",
+                            "icon": "diandancheguanli",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "user",
+                        "component": "bicycle/basic/user",
+                        "name": "bicycle_basic_user",
+                        "meta": {
+                            "title": "用户信息",
+                            "icon": "yonghu",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "area",
+                        "component": "bicycle/basic/area",
+                        "name": "bicycle_basic_area",
+                        "meta": {
+                            "title": "停车区域信息",
+                            "icon": "tingchequyu",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "operate",
+                        "component": "bicycle/basic/operate",
+                        "name": "bicycle_basic_operate",
+                        "meta": {
+                            "title": "运营人员信息",
+                            "icon": "yunyingrenyuan",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "manage",
+                        "component": "bicycle/basic/manage",
+                        "name": "bicycle_basic_manage",
+                        "meta": {
+                            "title": "管理人员信息",
+                            "icon": "guanlirenyuan",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "price",
+                        "component": "bicycle/basic/price",
+                        "name": "bicycle_basic_price",
+                        "meta": {
+                            "title": "运价表信息",
+                            "icon": "yunjiaguanli",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            },
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "manage",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "经营数据",
+                    "icon": "RectangleCopy",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "breakdown",
+                        "component": "bicycle/manage/breakdown",
+                        "name": "bicycle_manage_breakdown",
+                        "meta": {
+                            "title": "车辆故障信息",
+                            "icon": "cheliangguzhang",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "order",
+                        "component": "bicycle/manage/order",
+                        "name": "bicycle_manage_order",
+                        "meta": {
+                            "title": "订单信息",
+                            "icon": "ziyuan117",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "order/find/:id",
+                        "component": "bicycle/manage/order/find",
+                        "name": "bicycle_manage_order_find",
+                        "meta": {
+                            "title": "订单信息查看",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            },
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "position",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "定位信息",
+                    "icon": "dingwei",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "mass",
+                        "component": "bicycle/position/mass",
+                        "name": "bicycle_position_mass",
+                        "meta": {
+                            "title": "定位信息",
+                            "icon": "dingwei",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

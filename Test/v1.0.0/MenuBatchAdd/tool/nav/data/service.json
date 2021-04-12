@@ -1,0 +1,715 @@
+[
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service",
+        "component": "Layout",
+        "name": "Layout",
+        "redirect": "/service/index",
+        "meta": {
+            "title": "首页",
+            "icon": "jichuxinxi",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "index",
+                "component": "service/index",
+                "name": "service_index",
+                "meta": {
+                    "title": "首页",
+                    "icon": "shouye",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/basic",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "基础信息管理",
+            "icon": "jichuxinxi",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "company",
+                "component": "service/basic/company",
+                "name": "service_basic_company",
+                "meta": {
+                    "title": "运营公司管理",
+                    "icon": "gongsi",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "company/find/:id",
+                "component": "service/basic/company/find",
+                "name": "service_basic_company_find",
+                "meta": {
+                    "title": "运营公司管理查看",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "area",
+                "component": "service/basic/area",
+                "name": "service_basic_area",
+                "meta": {
+                    "title": "服务区信息",
+                    "icon": "fuwuqu",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "area/insert",
+                "component": "service/basic/area/insert",
+                "name": "service_basic_area_insert",
+                "meta": {
+                    "title": "服务区信息新增",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "area/find/:id",
+                "component": "service/basic/area/find",
+                "name": "service_basic_area_find",
+                "meta": {
+                    "title": "服务区信息查看",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "area/update/:id",
+                "component": "service/basic/area/update",
+                "name": "service_basic_area_update",
+                "meta": {
+                    "title": "服务区信息修改",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/report",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "监管信息报送",
+            "icon": "zaixianjianguan1",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "dynamic",
+                "component": "service/report/dynamic",
+                "name": "service_report_dynamic",
+                "meta": {
+                    "title": "动态信息报送",
+                    "icon": "dongtaixinxizhuaqu",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "dynamic/find/:id",
+                "component": "service/report/dynamic/find",
+                "name": "service_report_dynamic_find",
+                "meta": {
+                    "title": "数据监测详情",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/video",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "重点视频监控",
+            "icon": "shipinjiankongxitong",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "realtime",
+                "component": "service/video/realtime",
+                "name": "service_video_realtime",
+                "meta": {
+                    "title": "实时视频",
+                    "icon": "shipin",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "playback",
+                "component": "service/video/playback",
+                "name": "service_video_playback",
+                "meta": {
+                    "title": "录像视频",
+                    "icon": "shipin",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/passenger",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "实时客流监测",
+            "icon": "qunfengjindiankeliuleixingfenxi",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "video",
+                "component": "service/passenger/video",
+                "name": "service_passenger_video",
+                "meta": {
+                    "title": "实时客流监测",
+                    "icon": "qunfengjindiankeliuleixingfenxi",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "manage",
+                "component": "service/passenger/manage",
+                "name": "service_passenger_manage",
+                "meta": {
+                    "title": "客流监测管理",
+                    "icon": "kltj",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "manage/find/:id",
+                "component": "service/passenger/manage/find",
+                "name": "service_passenger_manage_find",
+                "meta": {
+                    "title": "客流监测管理详情",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/traffic",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "动态车流监测",
+            "icon": "cheliuliang",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "enter",
+                "component": "service/traffic/enter",
+                "name": "service_traffic_enter",
+                "meta": {
+                    "title": "车辆入口管理",
+                    "icon": "rukou",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "enter/find/:id",
+                "component": "service/traffic/enter/find",
+                "name": "service_traffic_enter_find",
+                "meta": {
+                    "title": "车辆入口管理详情",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "exit",
+                "component": "service/traffic/exit",
+                "name": "service_traffic_exit",
+                "meta": {
+                    "title": "车辆出口管理",
+                    "icon": "chukou",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "exit/find/:id",
+                "component": "service/traffic/exit/find",
+                "name": "service_traffic_exit_find",
+                "meta": {
+                    "title": "车辆出口管理详情",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "record",
+                "component": "service/traffic/record",
+                "name": "service_traffic_record",
+                "meta": {
+                    "title": "车辆记录管理",
+                    "icon": "jilu",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "record/find/:id",
+                "component": "service/traffic/record/find",
+                "name": "service_traffic_record_find",
+                "meta": {
+                    "title": "车辆记录管理详情",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/stall",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "车位状态监测",
+            "icon": "chewei",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "manage",
+                "component": "service/stall/manage",
+                "name": "service_stall_manage",
+                "meta": {
+                    "title": "车位监测管理",
+                    "icon": "chewei",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/restroom",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "智慧厕所服务",
+            "icon": "cesuo1",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "plate",
+                "component": "service/restroom/plate",
+                "name": "service_restroom_plate",
+                "meta": {
+                    "title": "厕所数据看板",
+                    "icon": "lvhangcesuotongji",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "visitor",
+                "component": "service/restroom/visitor",
+                "name": "service_restroom_visitor",
+                "meta": {
+                    "title": "人流数据监测",
+                    "icon": "cesuo",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "visitor/find/:id",
+                "component": "service/restroom/visitor/find",
+                "name": "service_restroom_visitor_find",
+                "meta": {
+                    "title": "人流数据监测查看",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "pit",
+                "component": "service/restroom/pit",
+                "name": "service_restroom_pit",
+                "meta": {
+                    "title": "坑位数据分析",
+                    "icon": "cesuo",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "pit/find/:id",
+                "component": "service/restroom/pit/find",
+                "name": "service_restroom_pit_find",
+                "meta": {
+                    "title": "坑位数据分析详情",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/energy",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "能源服务管理",
+            "icon": "nengyuanfuwu",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "charge",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "充电服务管理",
+                    "icon": "chongdianfuwu",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": 0,
+                        "alwaysShow": false,
+                        "path": "monitor",
+                        "component": "service/energy/charge/monitor",
+                        "name": "service_energy_charge_monitor",
+                        "meta": {
+                            "title": "充电桩实时监测",
+                            "icon": "chongdianzhuang",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": 0,
+                        "alwaysShow": false,
+                        "path": "record",
+                        "component": "service/energy/charge/record",
+                        "name": "service_energy_charge_record",
+                        "meta": {
+                            "title": "充电记录管理",
+                            "icon": "chongdianjilu",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": 1,
+                        "alwaysShow": false,
+                        "path": "record/find/:id",
+                        "component": "service/energy/charge/record/find",
+                        "name": "service_energy_charge_record_find",
+                        "meta": {
+                            "title": "充电记录管理详情",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/wifi",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "无线网络应用",
+            "icon": "wuxianwangluo",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "config",
+                "component": "service/wifi/config",
+                "name": "service_wifi_config",
+                "meta": {
+                    "title": "网络配置管理",
+                    "icon": "wangluopeizhi",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "record",
+                "component": "service/wifi/record",
+                "name": "service_wifi_record",
+                "meta": {
+                    "title": "连接记录监测",
+                    "icon": "jilu",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/induce",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "诱导信息发布",
+            "icon": "youdaoping",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 1,
+                "alwaysShow": false,
+                "path": "screen",
+                "component": "service/induce/screen",
+                "name": "service_induce_screen",
+                "meta": {
+                    "title": "信息同屏管理",
+                    "icon": "",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/theme",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "主题统计分析",
+            "icon": "zhutitongji",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "passenger",
+                "component": "service/theme/passenger",
+                "name": "service_theme_passenger",
+                "meta": {
+                    "title": "客流统计分析",
+                    "icon": "kltj",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "traffic",
+                "component": "service/theme/traffic",
+                "name": "service_theme_traffic",
+                "meta": {
+                    "title": "车流统计分析",
+                    "icon": "cheliutongji",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "stall",
+                "component": "service/theme/stall",
+                "name": "service_theme_stall",
+                "meta": {
+                    "title": "车位统计分析",
+                    "icon": "chewei",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "pit",
+                "component": "service/theme/pit",
+                "name": "service_theme_pit",
+                "meta": {
+                    "title": "厕所统计分析",
+                    "icon": "lvhangcesuotongji",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "wireless",
+                "component": "service/theme/wireless",
+                "name": "service_theme_wireless",
+                "meta": {
+                    "title": "无线统计分析",
+                    "icon": "wuxianwangluo",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "energy",
+                "component": "service/theme/energy",
+                "name": "service_theme_energy",
+                "meta": {
+                    "title": "能源统计分析",
+                    "icon": "nengyuanfuwu",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    },
+    {
+        "hidden": 0,
+        "alwaysShow": false,
+        "path": "/service/business",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "业务数据报表",
+            "icon": "yewubaobiao",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "passenger",
+                "component": "service/business/passenger",
+                "name": "service_business_passenger",
+                "meta": {
+                    "title": "客流统计分析",
+                    "icon": "kltj",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "traffic",
+                "component": "service/business/traffic",
+                "name": "service_business_traffic",
+                "meta": {
+                    "title": "车流统计分析",
+                    "icon": "cheliutongji",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "stall",
+                "component": "service/business/stall",
+                "name": "service_business_stall",
+                "meta": {
+                    "title": "车位统计分析",
+                    "icon": "chewei",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "pit",
+                "component": "service/business/pit",
+                "name": "service_business_pit",
+                "meta": {
+                    "title": "厕所统计分析",
+                    "icon": "lvhangcesuotongji",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "wireless",
+                "component": "service/business/wireless",
+                "name": "service_business_wireless",
+                "meta": {
+                    "title": "无线统计分析",
+                    "icon": "wuxianwangluo",
+                    "crumb": "noClick"
+                }
+            },
+            {
+                "hidden": 0,
+                "alwaysShow": false,
+                "path": "energy",
+                "component": "service/business/energy",
+                "name": "service_business_energy",
+                "meta": {
+                    "title": "能源统计分析",
+                    "icon": "nengyuanfuwu",
+                    "crumb": "noClick"
+                }
+            }
+        ]
+    }
+]

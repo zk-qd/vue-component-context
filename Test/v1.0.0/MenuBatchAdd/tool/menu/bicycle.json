@@ -1,0 +1,317 @@
+[
+    {
+        "icon": "wangyueche",
+        "visible": "0",
+        "menuType": "M",
+        "menuName": "共享单车模块",
+        "path": "bicycle",
+        "orderNum": 1,
+        "component": "Layout",
+        "name": "Layout",
+        "parentId": 0,
+        "children": [
+            {
+                "icon": "pingtaiguanlixukezhengguanli",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "基础数据",
+                "path": "basic",
+                "orderNum": 1,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "qiye",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "企业信息",
+                        "path": "company",
+                        "orderNum": 1,
+                        "perms": "bicycle:basic:company:page",
+                        "component": "bicycle/basic/company",
+                        "name": "bicycle_basic_company",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:basic:company:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "diandancheguanli",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "车辆信息（电单车）",
+                        "path": "car",
+                        "orderNum": 4,
+                        "perms": "bicycle:basic:car:page",
+                        "component": "bicycle/basic/car",
+                        "name": "bicycle_basic_car",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:basic:car:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "yonghu",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "用户信息",
+                        "path": "user",
+                        "orderNum": 7,
+                        "perms": "bicycle:basic:user:page",
+                        "component": "bicycle/basic/user",
+                        "name": "bicycle_basic_user",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:basic:user:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "tingchequyu",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "停车区域信息",
+                        "path": "area",
+                        "orderNum": 10,
+                        "perms": "bicycle:basic:area:page",
+                        "component": "bicycle/basic/area",
+                        "name": "bicycle_basic_area",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:basic:area:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "yunyingrenyuan",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "运营人员信息",
+                        "path": "operate",
+                        "orderNum": 13,
+                        "perms": "bicycle:basic:operate:page",
+                        "component": "bicycle/basic/operate",
+                        "name": "bicycle_basic_operate",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:basic:operate:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "guanlirenyuan",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "管理人员信息",
+                        "path": "manage",
+                        "orderNum": 16,
+                        "perms": "bicycle:basic:manage:page",
+                        "component": "bicycle/basic/manage",
+                        "name": "bicycle_basic_manage",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:basic:manage:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "yunjiaguanli",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "运价表信息",
+                        "path": "price",
+                        "orderNum": 19,
+                        "perms": "bicycle:basic:price:page",
+                        "component": "bicycle/basic/price",
+                        "name": "bicycle_basic_price",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:basic:price:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            },
+            {
+                "icon": "RectangleCopy",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "经营数据",
+                "path": "manage",
+                "orderNum": 4,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "cheliangguzhang",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "车辆故障信息",
+                        "path": "breakdown",
+                        "orderNum": 1,
+                        "perms": "bicycle:manage:breakdown:page",
+                        "component": "bicycle/manage/breakdown",
+                        "name": "bicycle_manage_breakdown",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:manage:breakdown:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "ziyuan117",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "订单信息",
+                        "path": "order",
+                        "orderNum": 4,
+                        "perms": "bicycle:manage:order:page",
+                        "component": "bicycle/manage/order",
+                        "name": "bicycle_manage_order",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:manage:order:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "bicycle:manage:order:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "订单信息查看",
+                        "path": "order/find/:id",
+                        "orderNum": 7,
+                        "perms": "bicycle:manage:order:find:page",
+                        "component": "bicycle/manage/order/find",
+                        "name": "bicycle_manage_order_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            },
+            {
+                "icon": "dingwei",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "定位信息",
+                "path": "position",
+                "orderNum": 7,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "dingwei",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "定位信息",
+                        "path": "mass",
+                        "orderNum": 1,
+                        "perms": "bicycle:position:mass:page",
+                        "component": "bicycle/position/mass",
+                        "name": "bicycle_position_mass",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "bicycle:position:mass:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            }
+        ],
+        "crumb": "noClick",
+        "isFrame": "1",
+        "status": "0",
+        "alwaysShow": false
+    }
+]

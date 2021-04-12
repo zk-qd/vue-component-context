@@ -1,0 +1,585 @@
+[
+    {
+        "hidden": false,
+        "alwaysShow": false,
+        "path": "/ucar",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "网约车模块",
+            "icon": "wangyueche",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "license",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "许可数据",
+                    "icon": "pingtaiguanlixukezhengguanli",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "company",
+                        "component": "ucar/license/company",
+                        "name": "ucar_license_company",
+                        "meta": {
+                            "title": "平台许可信息",
+                            "icon": "qiye",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "company/find/:id",
+                        "component": "ucar/license/company/find",
+                        "name": "ucar_license_company_find",
+                        "meta": {
+                            "title": "平台许可信息查看",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "car",
+                        "component": "ucar/license/car",
+                        "name": "ucar_license_car",
+                        "meta": {
+                            "title": "车辆许可信息",
+                            "icon": "cheliangxinxi",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "car/find/:id",
+                        "component": "ucar/license/car/find",
+                        "name": "ucar_license_car_find",
+                        "meta": {
+                            "title": "车辆许可信息查看",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "driver",
+                        "component": "ucar/license/driver",
+                        "name": "ucar_license_driver",
+                        "meta": {
+                            "title": "驾驶员许可信息",
+                            "icon": "jiashiyuandanganguanli",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "driver/find/:id",
+                        "component": "ucar/license/driver/find",
+                        "name": "ucar_license_driver_find",
+                        "meta": {
+                            "title": "驾驶员许可信息查看",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            },
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "basic",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "基础数据",
+                    "icon": "jichushuju",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "company",
+                        "component": "ucar/basic/company",
+                        "name": "ucar_basic_company",
+                        "meta": {
+                            "title": "平台信息",
+                            "icon": "qiye",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "company/find/:id",
+                        "component": "ucar/basic/company/find",
+                        "name": "ucar_basic_company_find",
+                        "meta": {
+                            "title": "平台信息查看",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "car",
+                        "component": "ucar/basic/car",
+                        "name": "ucar_basic_car",
+                        "meta": {
+                            "title": "车辆信息",
+                            "icon": "cheliangxinxi",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "car/find/:id",
+                        "component": "ucar/basic/car/find",
+                        "name": "ucar_basic_car_find",
+                        "meta": {
+                            "title": "车辆信息查看",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "driver",
+                        "component": "ucar/basic/driver",
+                        "name": "ucar_basic_driver",
+                        "meta": {
+                            "title": "驾驶员信息",
+                            "icon": "jiashiyuandanganguanli",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "driver/find/:id",
+                        "component": "ucar/basic/driver/find",
+                        "name": "ucar_basic_driver_find",
+                        "meta": {
+                            "title": "驾驶员信息查看",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            },
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "order",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "订单数据",
+                    "icon": "dingdanshuju",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "initiate",
+                        "component": "ucar/order/initiate",
+                        "name": "ucar_order_initiate",
+                        "meta": {
+                            "title": "订单发起信息",
+                            "icon": "ziyuan117",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "initiate/find/:id",
+                        "component": "ucar/order/initiate/find",
+                        "name": "ucar_order_initiate_find",
+                        "meta": {
+                            "title": "订单发起信息查看",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "success",
+                        "component": "ucar/order/success",
+                        "name": "ucar_order_success",
+                        "meta": {
+                            "title": "订单成功信息",
+                            "icon": "order-success2",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "success/find/:id",
+                        "component": "ucar/order/success/find",
+                        "name": "ucar_order_success_find",
+                        "meta": {
+                            "title": "订单成功信息查看",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "cancel",
+                        "component": "ucar/order/cancel",
+                        "name": "ucar_order_cancel",
+                        "meta": {
+                            "title": "订单撤销信息",
+                            "icon": "order2-cut",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "cancel/find/:id",
+                        "component": "ucar/order/cancel/find",
+                        "name": "ucar_order_cancel_find",
+                        "meta": {
+                            "title": "订单撤销信息查看",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            },
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "manage",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "经营数据",
+                    "icon": "RectangleCopy",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "online",
+                        "component": "ucar/manage/online",
+                        "name": "ucar_manage_online",
+                        "meta": {
+                            "title": "车辆上线信息",
+                            "icon": "zaixiancheliang",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "offline",
+                        "component": "ucar/manage/offline",
+                        "name": "ucar_manage_offline",
+                        "meta": {
+                            "title": "订单下线信息",
+                            "icon": "cheliangzhuanru",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "start",
+                        "component": "ucar/manage/start",
+                        "name": "ucar_manage_start",
+                        "meta": {
+                            "title": "经营出发信息",
+                            "icon": "chufatangciicon1024px",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "start/find/:id",
+                        "component": "ucar/manage/start/find",
+                        "name": "ucar_manage_start_find",
+                        "meta": {
+                            "title": "经营出发信息查看",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "arrive",
+                        "component": "ucar/manage/arrive",
+                        "name": "ucar_manage_arrive",
+                        "meta": {
+                            "title": "经营到达信息",
+                            "icon": "daoda-",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "arrive/find/:id",
+                        "component": "ucar/manage/arrive/find",
+                        "name": "ucar_manage_arrive_find",
+                        "meta": {
+                            "title": "经营出发信息查看",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "pay",
+                        "component": "ucar/manage/pay",
+                        "name": "ucar_manage_pay",
+                        "meta": {
+                            "title": "经营支付信息",
+                            "icon": "zhifu",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "pay/find/:id",
+                        "component": "ucar/manage/pay/find",
+                        "name": "ucar_manage_pay_find",
+                        "meta": {
+                            "title": "经营支付信息查看",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            },
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "position",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "定位信息",
+                    "icon": "dingwei",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "mass",
+                        "component": "ucar/position/mass",
+                        "name": "ucar_position_mass",
+                        "meta": {
+                            "title": "定位信息",
+                            "icon": "dingwei",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "hidden": false,
+        "alwaysShow": false,
+        "path": "/bicycle",
+        "component": "Layout",
+        "name": "Layout",
+        "meta": {
+            "title": "共享单车模块",
+            "icon": "wangyueche",
+            "crumb": "noClick"
+        },
+        "children": [
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "basic",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "基础数据",
+                    "icon": "pingtaiguanlixukezhengguanli",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "company",
+                        "component": "bicycle/basic/company",
+                        "name": "bicycle_basic_company",
+                        "meta": {
+                            "title": "企业信息",
+                            "icon": "qiye",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "car",
+                        "component": "bicycle/basic/car",
+                        "name": "bicycle_basic_car",
+                        "meta": {
+                            "title": "车辆信息（电单车）",
+                            "icon": "diandancheguanli",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "user",
+                        "component": "bicycle/basic/user",
+                        "name": "bicycle_basic_user",
+                        "meta": {
+                            "title": "用户信息",
+                            "icon": "yonghu",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "area",
+                        "component": "bicycle/basic/area",
+                        "name": "bicycle_basic_area",
+                        "meta": {
+                            "title": "停车区域信息",
+                            "icon": "tingchequyu",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "operate",
+                        "component": "bicycle/basic/operate",
+                        "name": "bicycle_basic_operate",
+                        "meta": {
+                            "title": "运营人员信息",
+                            "icon": "yunyingrenyuan",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "manage",
+                        "component": "bicycle/basic/manage",
+                        "name": "bicycle_basic_manage",
+                        "meta": {
+                            "title": "管理人员信息",
+                            "icon": "guanlirenyuan",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "price",
+                        "component": "bicycle/basic/price",
+                        "name": "bicycle_basic_price",
+                        "meta": {
+                            "title": "运价表信息",
+                            "icon": "yunjiaguanli",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            },
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "manage",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "经营数据",
+                    "icon": "RectangleCopy",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "breakdown",
+                        "component": "bicycle/manage/breakdown",
+                        "name": "bicycle_manage_breakdown",
+                        "meta": {
+                            "title": "车辆故障信息",
+                            "icon": "cheliangguzhang",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "order",
+                        "component": "bicycle/manage/order",
+                        "name": "bicycle_manage_order",
+                        "meta": {
+                            "title": "订单信息",
+                            "icon": "ziyuan117",
+                            "crumb": "noClick"
+                        }
+                    },
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "order/find/:id",
+                        "component": "bicycle/manage/order/find",
+                        "name": "bicycle_manage_order_find",
+                        "meta": {
+                            "title": "订单信息查看",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            },
+            {
+                "hidden": false,
+                "alwaysShow": false,
+                "path": "position",
+                "component": "Blank",
+                "name": "Blank",
+                "meta": {
+                    "title": "定位信息",
+                    "icon": "dingwei",
+                    "crumb": "noClick"
+                },
+                "children": [
+                    {
+                        "hidden": false,
+                        "alwaysShow": false,
+                        "path": "mass",
+                        "component": "bicycle/position/mass",
+                        "name": "bicycle_position_mass",
+                        "meta": {
+                            "title": "定位信息",
+                            "icon": "dingwei",
+                            "crumb": "noClick"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

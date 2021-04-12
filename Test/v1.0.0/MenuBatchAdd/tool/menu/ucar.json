@@ -1,0 +1,684 @@
+[
+    {
+        "icon": "wangyueche",
+        "visible": "0",
+        "menuType": "M",
+        "menuName": "网约车模块",
+        "path": "ucar",
+        "orderNum": 1,
+        "component": "Layout",
+        "name": "Layout",
+        "parentId": 0,
+        "children": [
+            {
+                "icon": "pingtaiguanlixukezhengguanli",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "许可数据",
+                "path": "license",
+                "orderNum": 1,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "qiye",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "平台许可信息",
+                        "path": "company",
+                        "orderNum": 1,
+                        "perms": "ucar:license:company:page",
+                        "component": "ucar/license/company",
+                        "name": "ucar_license_company",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:license:company:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:license:company:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "平台许可信息查看",
+                        "path": "company/find/:id",
+                        "orderNum": 4,
+                        "perms": "ucar:license:company:find:page",
+                        "component": "ucar/license/company/find",
+                        "name": "ucar_license_company_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "cheliangxinxi",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "车辆许可信息",
+                        "path": "car",
+                        "orderNum": 7,
+                        "perms": "ucar:license:car:page",
+                        "component": "ucar/license/car",
+                        "name": "ucar_license_car",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:license:car:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:license:car:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "车辆许可信息查看",
+                        "path": "car/find/:id",
+                        "orderNum": 10,
+                        "perms": "ucar:license:car:find:page",
+                        "component": "ucar/license/car/find",
+                        "name": "ucar_license_car_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "jiashiyuandanganguanli",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "驾驶员许可信息",
+                        "path": "driver",
+                        "orderNum": 13,
+                        "perms": "ucar:license:driver:page",
+                        "component": "ucar/license/driver",
+                        "name": "ucar_license_driver",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:license:driver:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:license:driver:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "驾驶员许可信息查看",
+                        "path": "driver/find/:id",
+                        "orderNum": 16,
+                        "perms": "ucar:license:driver:find:page",
+                        "component": "ucar/license/driver/find",
+                        "name": "ucar_license_driver_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            },
+            {
+                "icon": "jichushuju",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "基础数据",
+                "path": "basic",
+                "orderNum": 4,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "qiye",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "平台信息",
+                        "path": "company",
+                        "orderNum": 1,
+                        "perms": "ucar:basic:company:page",
+                        "component": "ucar/basic/company",
+                        "name": "ucar_basic_company",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:basic:company:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:basic:company:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "平台信息查看",
+                        "path": "company/find/:id",
+                        "orderNum": 4,
+                        "perms": "ucar:basic:company:find:page",
+                        "component": "ucar/basic/company/find",
+                        "name": "ucar_basic_company_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "cheliangxinxi",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "车辆信息",
+                        "path": "car",
+                        "orderNum": 7,
+                        "perms": "ucar:basic:car:page",
+                        "component": "ucar/basic/car",
+                        "name": "ucar_basic_car",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:basic:car:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:basic:car:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "车辆信息查看",
+                        "path": "car/find/:id",
+                        "orderNum": 10,
+                        "perms": "ucar:basic:car:find:page",
+                        "component": "ucar/basic/car/find",
+                        "name": "ucar_basic_car_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "jiashiyuandanganguanli",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "驾驶员信息",
+                        "path": "driver",
+                        "orderNum": 13,
+                        "perms": "ucar:basic:driver:page",
+                        "component": "ucar/basic/driver",
+                        "name": "ucar_basic_driver",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:basic:driver:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:basic:driver:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "驾驶员信息查看",
+                        "path": "driver/find/:id",
+                        "orderNum": 16,
+                        "perms": "ucar:basic:driver:find:page",
+                        "component": "ucar/basic/driver/find",
+                        "name": "ucar_basic_driver_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            },
+            {
+                "icon": "dingdanshuju",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "订单数据",
+                "path": "order",
+                "orderNum": 7,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "ziyuan117",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "订单发起信息",
+                        "path": "initiate",
+                        "orderNum": 1,
+                        "perms": "ucar:order:initiate:page",
+                        "component": "ucar/order/initiate",
+                        "name": "ucar_order_initiate",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:order:initiate:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:order:initiate:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "订单发起信息查看",
+                        "path": "initiate/find/:id",
+                        "orderNum": 4,
+                        "perms": "ucar:order:initiate:find:page",
+                        "component": "ucar/order/initiate/find",
+                        "name": "ucar_order_initiate_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "order-success2",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "订单成功信息",
+                        "path": "success",
+                        "orderNum": 7,
+                        "perms": "ucar:order:success:page",
+                        "component": "ucar/order/success",
+                        "name": "ucar_order_success",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:order:success:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:order:success:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "订单成功信息查看",
+                        "path": "success/find/:id",
+                        "orderNum": 10,
+                        "perms": "ucar:order:success:find:page",
+                        "component": "ucar/order/success/find",
+                        "name": "ucar_order_success_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "order2-cut",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "订单撤销信息",
+                        "path": "cancel",
+                        "orderNum": 13,
+                        "perms": "ucar:order:cancel:page",
+                        "component": "ucar/order/cancel",
+                        "name": "ucar_order_cancel",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:order:cancel:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:order:cancel:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "订单撤销信息查看",
+                        "path": "cancel/find/:id",
+                        "orderNum": 16,
+                        "perms": "ucar:order:cancel:find:page",
+                        "component": "ucar/order/cancel/find",
+                        "name": "ucar_order_cancel_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            },
+            {
+                "icon": "RectangleCopy",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "经营数据",
+                "path": "manage",
+                "orderNum": 10,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "zaixiancheliang",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "车辆上线信息",
+                        "path": "online",
+                        "orderNum": 1,
+                        "perms": "ucar:manage:online:page",
+                        "component": "ucar/manage/online",
+                        "name": "ucar_manage_online",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:manage:online:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "cheliangzhuanru",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "订单下线信息",
+                        "path": "offline",
+                        "orderNum": 4,
+                        "perms": "ucar:manage:offline:page",
+                        "component": "ucar/manage/offline",
+                        "name": "ucar_manage_offline",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:manage:offline:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "chufatangciicon1024px",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "经营出发信息",
+                        "path": "start",
+                        "orderNum": 7,
+                        "perms": "ucar:manage:start:page",
+                        "component": "ucar/manage/start",
+                        "name": "ucar_manage_start",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:manage:start:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:manage:start:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "经营出发信息查看",
+                        "path": "start/find/:id",
+                        "orderNum": 10,
+                        "perms": "ucar:manage:start:find:page",
+                        "component": "ucar/manage/start/find",
+                        "name": "ucar_manage_start_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "daoda-",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "经营到达信息",
+                        "path": "arrive",
+                        "orderNum": 13,
+                        "perms": "ucar:manage:arrive:page",
+                        "component": "ucar/manage/arrive",
+                        "name": "ucar_manage_arrive",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:manage:arrive:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:manage:arrive:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "经营出发信息查看",
+                        "path": "arrive/find/:id",
+                        "orderNum": 16,
+                        "perms": "ucar:manage:arrive:find:page",
+                        "component": "ucar/manage/arrive/find",
+                        "name": "ucar_manage_arrive_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "icon": "zhifu",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "经营支付信息",
+                        "path": "pay",
+                        "orderNum": 19,
+                        "perms": "ucar:manage:pay:page",
+                        "component": "ucar/manage/pay",
+                        "name": "ucar_manage_pay",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:manage:pay:search"
+                            },
+                            {
+                                "menuType": "F",
+                                "menuName": "查看",
+                                "orderNum": 4,
+                                "perms": "ucar:manage:pay:find"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    },
+                    {
+                        "visible": "1",
+                        "menuType": "C",
+                        "menuName": "经营支付信息查看",
+                        "path": "pay/find/:id",
+                        "orderNum": 22,
+                        "perms": "ucar:manage:pay:find:page",
+                        "component": "ucar/manage/pay/find",
+                        "name": "ucar_manage_pay_find",
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            },
+            {
+                "icon": "dingwei",
+                "visible": "0",
+                "menuType": "M",
+                "menuName": "定位信息",
+                "path": "position",
+                "orderNum": 13,
+                "component": "Blank",
+                "name": "Blank",
+                "children": [
+                    {
+                        "icon": "dingwei",
+                        "visible": "0",
+                        "menuType": "C",
+                        "menuName": "定位信息",
+                        "path": "mass",
+                        "orderNum": 1,
+                        "perms": "ucar:position:mass:page",
+                        "component": "ucar/position/mass",
+                        "name": "ucar_position_mass",
+                        "children": [
+                            {
+                                "menuType": "F",
+                                "menuName": "搜索",
+                                "orderNum": 1,
+                                "perms": "ucar:position:mass:search"
+                            }
+                        ],
+                        "crumb": "noClick",
+                        "isFrame": "1",
+                        "status": "0",
+                        "alwaysShow": false
+                    }
+                ],
+                "crumb": "noClick",
+                "isFrame": "1",
+                "status": "0",
+                "alwaysShow": false
+            }
+        ],
+        "crumb": "noClick",
+        "isFrame": "1",
+        "status": "0",
+        "alwaysShow": false
+    }
+]
